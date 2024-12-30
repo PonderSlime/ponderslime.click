@@ -1,16 +1,34 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import { Noto_Sans_Mono, Courier_Prime, JetBrains_Mono, IBM_Plex_Mono } from "next/font/google";
+import "./output.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+import { config } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+config.autoAddCss = false
+
+const notoSansMono = Noto_Sans_Mono({
+  variable: "--font-noto-sans-mono",
+  display: 'swap',
   subsets: ["latin"],
 });
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const courierPrime = Courier_Prime({
+  variable: "--font-courier-mono",
+  display: 'swap',
+  subsets: ["latin"],
+  weight: "700",
+});
+const jetBrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
+  display: 'swap',
   subsets: ["latin"],
 });
+const ibmPlexMono = IBM_Plex_Mono({
+  variable: "--font-ibm-plex-mono",
+  display: 'swap',
+  subsets: ["latin"],
+  weight: "500",
+});
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,7 +43,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${jetBrainsMono.variable} antialiased`}
       >
         {children}
       </body>
