@@ -1,15 +1,24 @@
 "use client";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import Card from "@/components/card";
 import { animate, motion, useMotionValue } from "motion/react";
 
-export default function AutoScroll(props) {
-  const [width, setWidth] = useState(0);
+
+interface Item {
+    image: string;
+    link: string;
+  }
+  
+  // Define the type for props
+  interface AutoScrollProps {
+    items: Item[];
+  }
+
+export default function AutoScroll(props: AutoScrollProps) {
   const xTranslation = useMotionValue(0);
   const ref = useRef(null);
 
   useEffect(() => {
-    setWidth(window.innerWidth);
 
     let controls;
     const finalPosition = -((props.items.length * 216));
@@ -23,7 +32,7 @@ export default function AutoScroll(props) {
     });
 
     return () => controls.stop();
-  }, [xTranslation]);
+  }, [props.items, xTranslation]);
 
   return (
     <motion.div
