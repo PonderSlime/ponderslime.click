@@ -6,11 +6,11 @@ import Image from "next/image";
 
 
 const favorite_projects = [
-  {"image": "https://avatars.githubusercontent.com/u/41168529", "link": "https://github.com/ponderslime/"},
+  {"image": "https://avatars.githubusercontent.com/u/41168529", "link": "https://github.com/qcoral/"},
+  {"image": "https://avatars.githubusercontent.com/u/92754843", "link": "https://github.com/taciturnaxolotl"},
+  {"image": "https://avatars.githubusercontent.com/u/101356372", "link": "https://github.com/acornitum"},
   {"image": "https://avatars.githubusercontent.com/u/174149291", "link": "https://github.com/ponderslime/"},
-  {"image": "https://avatars.githubusercontent.com/u/174149291", "link": "https://github.com/ponderslime/"},
-  {"image": "https://avatars.githubusercontent.com/u/174149291", "link": "https://github.com/ponderslime/"},
-  {"image": "https://avatars.githubusercontent.com/u/174149291", "link": "https://github.com/ponderslime/"},
+  {"image": "https://avatars.githubusercontent.com/u/93046303", "link": "https://github.com/techy-robot/"},
 ]
 
 export default function Home() {
