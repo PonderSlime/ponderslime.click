@@ -39,7 +39,7 @@ export default function Home() {
             <h1 className="text-center text-4xl underline decoration-solid decoration-2 hover:decoration-4 underline-offset-8 pt-20 font-[family-name:var(--font-courier-mono)]">
               Welcome to my website!
             </h1>
-            <AutoScroll items={favorite_projects}/>
+            <AutoScroll items={favorite_projects} direction="to-right"/>
           </div>
         </div>
       </main>
