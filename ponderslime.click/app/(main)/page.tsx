@@ -1,37 +1,33 @@
-
+"use client"
 import AutoScroll from "@/components/auto-scroll";
-import { faUser, faPaintRoller, faBlog } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import GlobalFooter from "@/components/footer";
+import GlobalHeader from "@/components/header";
+
 import Image from "next/image";
-
-
-const favorite_projects = [
-  {"image": "/project-images/frogpad/frogpad.png", "link": "https://github.com/ponderslime/frogpad/"},
-  {"image": "/project-images/smallburrow/smallburrow.png", "link": "https://github.com/PonderSlime/Samwise-Smallburrow"},
-  {"image": "/project-images/pestranded/pestranded.png", "link": "https://github.com/PonderSlime/Planet-Earth-Stranded"},
-  {"image": "/project-images/norse/norse.png", "link": "https://github.com/PonderSlime/Norse---Linux-Mint-Rice"},
-  {"image": "/project-images/velocity/velocity.png", "link": "https://github.com/PonderSlime/The-Velocity-Project"},
-]
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [favoriteProjects, setFavoriteProjects] = useState([]);
+  useEffect(() => {
+    async function fetchFavoriteProjects() {
+      try {
+        const response = await fetch("/api/favorite-projects");
+        if (!response.ok) {
+          throw new Error("Failed to fetch favorite projects");
+        }
+        const data = await response.json();
+        setFavoriteProjects(data);
+      } catch (error) {
+        console.error(error);
+      }
+    }
+
+    fetchFavoriteProjects();
+  }, []);
+
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-jetbrains-mono)] bg-white dark:bg-slate-900" >
-      <header className="w-full h-full">
-        <div className="row-start-1 flex gap-12 flex-wrap items-center justify-center">
-          <a className="flex items-center gap-2 hover:underline hover:underline-offset-4" href="#">
-            <FontAwesomeIcon icon={faUser} className="fa-fw" />
-            About Me
-          </a>
-          <a className="flex items-center gap-2 hover:underline hover:underline-offset-4" href="#">
-            <FontAwesomeIcon icon={faPaintRoller} className="fa-fw" />
-            My Projects
-          </a>
-          <a className="flex items-center gap-2 hover:underline hover:underline-offset-4" href="#">
-            <FontAwesomeIcon icon={faBlog} className="fa-fw" />
-            My Blog
-          </a>
-        </div>
-      </header>
+      <GlobalHeader />
       <main className="h-full w-full">
         <div className="flex flex-col gap-2 items-center sm:items-start">
           <Image src="https://avatars.githubusercontent.com/u/174149291" className="self-center" alt="pfp" width={512} height={512}/>
@@ -56,16 +52,12 @@ export default function Home() {
               </p>
             </div>
             <div className="pt-20">
-              <AutoScroll items={favorite_projects} direction="to-left"/>
+              <AutoScroll items={favoriteProjects} direction="to-left"/>
             </div>
           </div>
         </div>
       </main>
-      <footer className="row-start-4 flex gap-6 pt-20 flex-wrap items-center justify-center bg-white dark:bg-slate-900">
-        <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
-          <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">2024 <a href="https://ponderslime.click/" className="hover:underline">PonderSlime</a>.</span>
-        </div>
-      </footer>
+      <GlobalFooter />
     </div>
   );
 }
