@@ -43,7 +43,7 @@ export default function AutoScroll(props: AutoScrollProps) {
 
             controls = animate(xTranslation, [xTranslation.get(), finalPosition], {
                 ease: "linear",
-                duration: duration * (props.direction === "to-left" ? (1 - xTranslation.get() / finalPosition) : (1 - xTranslation.get() / startPos)),
+                duration: duration * (props.direction === "to-left" ? (1 - xTranslation.get() / finalPosition) : (xTranslation.get() / startPos)),
                 onComplete: () => {
                     setMustFinish(false)
                     setRerender(!rerender)
