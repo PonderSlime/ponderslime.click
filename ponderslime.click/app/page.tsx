@@ -37,7 +37,7 @@ export default function Home() {
           <Image src="https://avatars.githubusercontent.com/u/174149291" className="self-center" alt="pfp" width={512} height={512}/>
           <div className="text-center items-center justify-center self-center text-red-500">
             <h1 className="text-center text-6xl underline decoration-solid decoration-2 hover:decoration-4 underline-offset-8 pt-20 font-[family-name:var(--font-courier-mono)]">
-             Hi there! I'm PonderSlime!
+              Hi there! I&apos;m PonderSlime!
             </h1>
             <div className="pt-9 text-2xl text-left indent-8 break-words text-wrap w-2/3 flex mx-auto self-center">
               <p className="text-lime-600">
