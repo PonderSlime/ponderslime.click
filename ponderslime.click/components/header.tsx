@@ -9,7 +9,7 @@ const GlobalHeader = () => {
                 <FontAwesomeIcon icon={faUser} className="fa-fw" />
                 About Me
                 </a>
-                <a className="flex items-center gap-2 hover:underline hover:underline-offset-4" href="#">
+                <a className="flex items-center gap-2 hover:underline hover:underline-offset-4" href="projects">
                 <FontAwesomeIcon icon={faPaintRoller} className="fa-fw" />
                 My Projects
                 </a>

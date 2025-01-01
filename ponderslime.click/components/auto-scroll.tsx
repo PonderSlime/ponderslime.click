@@ -15,18 +15,19 @@ interface Item {
     direction: "to-left" | "to-right"
   }
 
-const FAST_DURATION = 25;
-const SLOW_DURATION = 75;
-
 
 
 export default function AutoScroll(props: AutoScrollProps) {
+    const FAST_DURATION = props.items.length * 5
+    const SLOW_DURATION = props.items.length * 15;
     const [duration, setDuration] = useState(FAST_DURATION)
     const [mustFinish, setMustFinish] = useState(false)
     const [rerender, setRerender] = useState(false)
 
     const xTranslation = useMotionValue(0);
     const ref = useRef(null);
+
+    
 
     useEffect(() => {
 
@@ -39,6 +40,7 @@ export default function AutoScroll(props: AutoScrollProps) {
             ? 0
             : -(props.items.length * 216)
 
+        
         if (mustFinish) { 
 
             controls = animate(xTranslation, [xTranslation.get(), finalPosition], {
@@ -77,7 +79,7 @@ export default function AutoScroll(props: AutoScrollProps) {
 
         }}
         >
-        {[...props.items, ...props.items, ...props.items, ...props.items].map((item, idx) => (
+        {[...props.items, ...props.items, ...props.items, ...props.items, ...props.items, ...props.items].map((item, idx) => (
             <Card image={item.image} link={item.link} key={idx} />
         ))}
         </motion.div>
