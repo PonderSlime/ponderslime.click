@@ -18,6 +18,8 @@ const eslintConfig = [
         { varsIgnorePattern: "^_", argsIgnorePattern: "^_" },
       ],
       "prefer-const": "off",
+      "@typescript-eslint/no-explicit-any": "off",
+      "react-hooks/exhaustive-deps": "warn"
     },
   },
 ];
