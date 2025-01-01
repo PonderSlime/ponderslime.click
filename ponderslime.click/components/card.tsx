@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 import { AnimatePresence, motion } from "motion/react"
+import Link from "next/link";
 
 interface CardProps {
     image: string;
@@ -16,7 +17,7 @@ const Card: React.FC<CardProps> = ({ image, link, name }) => {
     const [showOverlay, setShowOverlay] = useState(false)
 
     return (
-        <a href={link} className="relative overflow-hidden h-[200px] min-w-[200px] bg-slate-400 rounded-xl flex justify-center items-center">
+        <Link href={link} className="relative overflow-hidden h-[200px] min-w-[200px] bg-slate-400 rounded-xl flex justify-center items-center">
             <motion.div onHoverStart={() => setShowOverlay(true)} onHoverEnd={() => setShowOverlay(false)}>
                 <AnimatePresence>
                     {showOverlay && (
@@ -44,7 +45,7 @@ const Card: React.FC<CardProps> = ({ image, link, name }) => {
                 </AnimatePresence>
                 <Image src={image} alt={image} fill style={{objectFit: 'cover'}} />
             </motion.div>
-        </a>
+        </Link>
     )
 }
 
