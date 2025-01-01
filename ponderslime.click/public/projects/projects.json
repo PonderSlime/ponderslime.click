@@ -1,13 +1,19 @@
 [
-    {"image": "/project-images/pestranded/pestranded.png", "link": "https://github.com/PonderSlime/Planet-Earth-Stranded", "year": "2024"},
-    {"image": "/project-images/warrenguard/warrenguard.png", "link": "https://github.com/PonderSlime/Warrenguard", "year": "2024"},
-    {"image": "/project-images/blot-project/blot-project.png", "link": "https://github.com/PonderSlime/BlotProject", "year": "2024"},
-    {"image": "/project-images/galactic-loophole/galactic-loophole.png", "link": "https://github.com/PonderSlime/Galactic-Loophole", "year": "2024"},
-    {"image": "/project-images/hack-club-stickers/hack-club-stickers.png", "link": "https://github.com/PonderSlime/Hack-Club-Stickers", "year": "2024"},
-    {"image": "/project-images/powerracer/powerracer.png", "link": "https://github.com/PonderSlime/PowerRacer", "year": "2024"},    
-
-    {"image": "/project-images/frogpad/frogpad.png", "link": "https://github.com/ponderslime/frogpad/", "year": "2024"},
-    {"image": "/project-images/smallburrow/smallburrow.png", "link": "https://github.com/PonderSlime/Samwise-Smallburrow", "year": "2024"},
-    {"image": "/project-images/norse/norse.png", "link": "https://github.com/PonderSlime/Norse---Linux-Mint-Rice", "year": "2024"},
-    {"image": "/project-images/velocity/velocity.png", "link": "https://github.com/PonderSlime/The-Velocity-Project", "year": "2024"}
+    {"name": "Planet Earth: Stranded", "image": "/project-images/pestranded/pestranded.png", "link": "https://github.com/PonderSlime/Planet-Earth-Stranded", "year": "2024"},
+    {"name": "Warrenguard", "image": "/project-images/warrenguard/warrenguard.png", "link": "https://github.com/PonderSlime/Warrenguard", "year": "2024"},
+    {"name": "Blot Project", "image": "/project-images/blot-project/blot-project.png", "link": "https://github.com/PonderSlime/BlotProject", "year": "2024"},
+    {"name": "Galactic Loophole", "image": "/project-images/galactic-loophole/galactic-loophole.png", "link": "https://github.com/PonderSlime/Galactic-Loophole", "year": "2024"},
+    {"name": "Hack Club Stickers", "image": "/project-images/hack-club-stickers/hack-club-stickers.png", "link": "https://github.com/PonderSlime/Hack-Club-Stickers", "year": "2024"},
+    {"name": "PowerRacer", "image": "/project-images/powerracer/powerracer.png", "link": "https://github.com/PonderSlime/PowerRacer", "year": "2024"},    
+    {"name": "Frogpad", "image": "/project-images/frogpad/frogpad.png", "link": "https://github.com/ponderslime/frogpad/", "year": "2024"},
+    {"name": "Boba Manor", "image": "/project-images/boba-manor/boba-manor.png", "link": "https://github.com/ponderslime/Boba-Manor-Submission/", "year": "2024"},
+    {"name": "Samwise Smallburrow", "image": "/project-images/smallburrow/smallburrow.png", "link": "https://github.com/PonderSlime/Samwise-Smallburrow", "year": "2024"},
+    {"name": "Original Site", "image": "/project-images/github.io/github.io.png", "link": "https://github.com/PonderSlime/ponderslime.github.io", "year": "2024"},
+    {"name": "The Velocity Project", "image": "/project-images/velocity/velocity.png", "link": "https://github.com/PonderSlime/The-Velocity-Project", "year": "2024"},
+    {"name": "AI Desktop", "image": "/project-images/ai-desktop/ai-desktop.png", "link": "https://github.com/PonderSlime/AI-Desktop", "year": "2024"},
+    {"name": "Magic Card Game", "image": "/project-images/mcg/mcg.png", "link": "https://github.com/PonderSlime/Magic-Card-Game", "year": "2024"},
+    
+    {"name": "Norse - Linux Mint Rice", "image": "/project-images/norse/norse.png", "link": "https://github.com/PonderSlime/Norse---Linux-Mint-Rice", "year": "2024"},
+    {"name": "PonderSlime.click", "image": "/project-images/ponderslime.click/ponderslime.click.png", "link": "https://github.com/PonderSlime/ponderslime.click", "year": "2024"}
+    
 ]

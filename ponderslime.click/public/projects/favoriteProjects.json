@@ -1,7 +1,7 @@
 [
-    {"image": "/project-images/frogpad/frogpad.png", "link": "https://github.com/ponderslime/frogpad/", "year": "2024"},
-    {"image": "/project-images/smallburrow/smallburrow.png", "link": "https://github.com/PonderSlime/Samwise-Smallburrow", "year": "2024"},
-    {"image": "/project-images/pestranded/pestranded.png", "link": "https://github.com/PonderSlime/Planet-Earth-Stranded", "year": "2024"},
-    {"image": "/project-images/norse/norse.png", "link": "https://github.com/PonderSlime/Norse---Linux-Mint-Rice", "year": "2024"},
-    {"image": "/project-images/velocity/velocity.png", "link": "https://github.com/PonderSlime/The-Velocity-Project", "year": "2024"}
+    {"name": "Frogpad", "image": "/project-images/frogpad/frogpad.png", "link": "https://github.com/ponderslime/frogpad/", "year": "2024"},
+    {"name": "Samwise Smallburrow", "image": "/project-images/smallburrow/smallburrow.png", "link": "https://github.com/PonderSlime/Samwise-Smallburrow", "year": "2024"},
+    {"name": "Planet Earth: Stranded", "image": "/project-images/pestranded/pestranded.png", "link": "https://github.com/PonderSlime/Planet-Earth-Stranded", "year": "2024"},
+    {"name": "Norse - Linux Mint Rice", "image": "/project-images/norse/norse.png", "link": "https://github.com/PonderSlime/Norse---Linux-Mint-Rice", "year": "2024"},
+    {"name": "The Velocity Project", "image": "/project-images/velocity/velocity.png", "link": "https://github.com/PonderSlime/The-Velocity-Project", "year": "2024"}
 ]

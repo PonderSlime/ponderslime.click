@@ -7,6 +7,7 @@ import { animate, motion, motionValue, useMotionValue } from "motion/react";
 interface Item {
     image: string;
     link: string;
+    name: string;
   }
   
   // Define the type for props
@@ -80,7 +81,7 @@ export default function AutoScroll(props: AutoScrollProps) {
         }}
         >
         {[...props.items, ...props.items, ...props.items, ...props.items, ...props.items, ...props.items].map((item, idx) => (
-            <Card image={item.image} link={item.link} key={idx} />
+            <Card image={item.image} link={item.link} name={item.name} key={idx} />
         ))}
         </motion.div>
     );

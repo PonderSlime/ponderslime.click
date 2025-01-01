@@ -5,7 +5,7 @@ import GlobalHeader from "@/components/header";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-const THRESHOLD = 6;
+const THRESHOLD = 9;
 
 export default function Projects() {
     const [projectsByYear, setProjectsByYear] = useState<{ [year: string]: any[] }>({})

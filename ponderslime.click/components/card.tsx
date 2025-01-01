@@ -8,10 +8,11 @@ import { AnimatePresence, motion } from "motion/react"
 
 interface CardProps {
     image: string;
-    link: string
+    link: string;
+    name: string;
 }
 
-const Card: React.FC<CardProps> = ({ image, link }) => {
+const Card: React.FC<CardProps> = ({ image, link, name }) => {
     const [showOverlay, setShowOverlay] = useState(false)
 
     return (
@@ -24,14 +25,19 @@ const Card: React.FC<CardProps> = ({ image, link }) => {
                             animate={{opacity: 1}}
                             exit={{opacity: 0}}
                         >
-                            <div className="absolute bg-black pointer-events-none opacity-50 h-full w-full"/>
-                            <motion.h1 className="bg-white font-semibold text-sm z-10 px-3 py-2 rounded-full flex items-center gap-[0.5ch] hover:opacity-75 text-red-700"
+                            <div className="absolute bg-black pointer-events-none opacity-50 h-full w-full text-center justify-center items-center" />
+                            <motion.h1 className="font-semibold text-sm z-10 px-3 py-2 rounded-full flex items-center flex-col text-center gap-[0.5ch] hover:opacity-75 text-red-700"
                                 initial={{y: 10}}
                                 animate={{y: 0}}
                                 exit={{y: 10}}
-                            >
-                                <span>Explore Now</span>
-                                <FontAwesomeIcon icon={faCircleArrowRight} className="h-4 w-4"/>
+                            >   
+                                <div className="text-xl font-bold">
+                                    {name}
+                                </div>
+                                <div className="bg-white rounded-full px-3 py-2">
+                                    <span >Explore Now</span>
+                                    <FontAwesomeIcon icon={faCircleArrowRight} className="h-4 w-4"/>
+                                </div>
                             </motion.h1>
                         </motion.div>
                     )}
