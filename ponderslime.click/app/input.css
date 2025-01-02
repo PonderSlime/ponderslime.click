@@ -19,3 +19,26 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.article {
+  @apply flex flex-col gap-3 text-lg tracking-wide mb-20
+}
+
+.article > h1 {
+  @apply text-4xl text-center tracking-tight
+}
+.article > h2 {
+  @apply text-3xl tracking-tight
+}
+.article > ol {
+  @apply list-decimal flex flex-col mx-10 gap-2
+}
+.article > l {
+  @apply list-disc flex flex-col mx-10 gap-2
+}
+.article > pre {
+  @apply bg-neutral-950 text-neutral-50 overflow-scroll p-5
+}
+.article > blockquote {
+  @apply pl-5 italic border-l-2 border-neutral-600 border-opacity-40
+}

@@ -591,40 +591,12 @@ video {
   margin-right: auto;
 }
 
-.mb-16 {
-  margin-bottom: 4rem;
-}
-
 .mb-4 {
   margin-bottom: 1rem;
 }
 
-.mb-\[300px\] {
-  margin-bottom: 300px;
-}
-
-.mb-8 {
-  margin-bottom: 2rem;
-}
-
-.mb-\[208px\] {
-  margin-bottom: 208px;
-}
-
-.mb-\[216px\] {
-  margin-bottom: 216px;
-}
-
 .mb-\[232px\] {
   margin-bottom: 232px;
-}
-
-.mt-4 {
-  margin-top: 1rem;
-}
-
-.mt-40 {
-  margin-top: 10rem;
 }
 
 .mt-16 {
@@ -659,6 +631,10 @@ video {
   width: 66.666667%;
 }
 
+.w-2\/6 {
+  width: 33.333333%;
+}
+
 .w-4 {
   width: 1rem;
 }
@@ -671,13 +647,12 @@ video {
   min-width: 200px;
 }
 
-.max-w-screen-xl {
-  max-width: 1280px;
+.max-w-screen-lg {
+  max-width: 1024px;
 }
 
-.columns-1 {
-  -moz-columns: 1;
-       columns: 1;
+.max-w-screen-xl {
+  max-width: 1280px;
 }
 
 .grid-cols-1 {
@@ -686,6 +661,10 @@ video {
 
 .grid-rows-\[20px_1fr_20px\] {
   grid-template-rows: 20px 1fr 20px;
+}
+
+.flex-row {
+  flex-direction: row;
 }
 
 .flex-col {
@@ -708,6 +687,10 @@ video {
   justify-items: center;
 }
 
+.gap-1 {
+  gap: 0.25rem;
+}
+
 .gap-12 {
   gap: 3rem;
 }
@@ -720,8 +703,20 @@ video {
   gap: 0.5rem;
 }
 
+.gap-2\.5 {
+  gap: 0.625rem;
+}
+
 .gap-4 {
   gap: 1rem;
+}
+
+.gap-48 {
+  gap: 12rem;
+}
+
+.gap-5 {
+  gap: 1.25rem;
 }
 
 .gap-6 {
@@ -730,12 +725,6 @@ video {
 
 .gap-\[0\.5ch\] {
   gap: 0.5ch;
-}
-
-.space-y-16 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(4rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(4rem * var(--tw-space-y-reverse));
 }
 
 .self-center {
@@ -837,6 +826,11 @@ video {
   line-height: 2.25rem;
 }
 
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
 .text-6xl {
   font-size: 3.75rem;
   line-height: 1;
@@ -847,22 +841,17 @@ video {
   line-height: 1.25rem;
 }
 
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
 
-.font-semibold {
-  font-weight: 600;
-}
-
 .font-bold {
   font-weight: 700;
+}
+
+.font-semibold {
+  font-weight: 600;
 }
 
 .text-blue-400 {
@@ -878,6 +867,11 @@ video {
 .text-lime-600 {
   --tw-text-opacity: 1;
   color: rgb(101 163 13 / var(--tw-text-opacity, 1));
+}
+
+.text-neutral-900 {
+  --tw-text-opacity: 1;
+  color: rgb(23 23 23 / var(--tw-text-opacity, 1));
 }
 
 .text-red-500 {
@@ -915,6 +909,18 @@ video {
   opacity: 0.5;
 }
 
+.transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.duration-150 {
+  transition-duration: 150ms;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -933,8 +939,67 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.last\:mb-0:last-child {
-  margin-bottom: 0px;
+.article {
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  letter-spacing: 0.025em;
+}
+
+.article > h1 {
+  text-align: center;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  letter-spacing: -0.025em;
+}
+
+.article > h2 {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  letter-spacing: -0.025em;
+}
+
+.article > ol {
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+  display: flex;
+  list-style-type: decimal;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.article > l {
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+  display: flex;
+  list-style-type: disc;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.article > pre {
+  overflow: scroll;
+  --tw-bg-opacity: 1;
+  background-color: rgb(10 10 10 / var(--tw-bg-opacity, 1));
+  padding: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(250 250 250 / var(--tw-text-opacity, 1));
+}
+
+.article > blockquote {
+  border-left-width: 2px;
+  border-color: rgb(82 82 82 / var(--tw-border-opacity, 1));
+  --tw-border-opacity: 0.4;
+  padding-left: 1.25rem;
+  font-style: italic;
+}
+
+.hover\:text-amber-700:hover {
+  --tw-text-opacity: 1;
+  color: rgb(180 83 9 / var(--tw-text-opacity, 1));
 }
 
 .hover\:underline:hover {
