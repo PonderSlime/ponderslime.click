@@ -3,8 +3,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { getArticleData } from "@/lib/articles";
 
-const Article = async ({params}: { params: { slug: string }}) => {
-    const articleData = await getArticleData(params.slug)
+type Params = { slug: string };
+
+const Article = async ({params}: { params: Promise<Params> }) => {
+    const slug = await params
+    const articleData = await getArticleData(slug.slug)
 
     return (
         <div className="grid grid-rows-[20px_1fr_20px] gap-16 grid-cols-1 justify-items-center min-h-screen p-8 pb-20 sm:p-20 font-[family-name:var(--font-jetbrains-mono)] bg-white dark:bg-slate-900 mx-auto">
