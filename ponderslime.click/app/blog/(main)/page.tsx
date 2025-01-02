@@ -15,14 +15,16 @@ export default function Projects() {
     return (
         <div className="grid grid-rows-[20px_1fr_20px] gap-16 grid-cols-1 items-center justify-items-center min-h-screen p-8 pb-20 sm:p-20 font-[family-name:var(--font-jetbrains-mono)] bg-white dark:bg-slate-900">
             <GlobalHeader />
-            <main className="w-full">
-                {articles !== null && Object.keys(articles).map(article => (
-                    <ArticleListItem
-                        category={article}
-                        articles={articles[article]}
-                        key={article}
-                    />
-                ))}
+            <main className="w-full h-full">
+                <div className="flex flex-col gap-2 items-center sm:items-start">
+                    {articles !== null && Object.keys(articles).map(article => (
+                        <ArticleListItem
+                            category={article}
+                            articles={articles[article]}
+                            key={article}
+                        />
+                    ))}
+                </div>
             </main>
             <GlobalFooter />
         </div>

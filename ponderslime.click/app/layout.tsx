@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Noto_Sans_Mono, Courier_Prime, JetBrains_Mono, IBM_Plex_Mono } from "next/font/google";
 import "./output.css";
+import ThemeProvider from "@/utils/theme-provider";
+import ThemeSwitcher from "@/components/theme-switcher";
 
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
@@ -45,7 +47,14 @@ export default function RootLayout({
       <body
         className={`${jetBrainsMono.variable} antialiased`}
       >
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+        >
+          <ThemeSwitcher />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

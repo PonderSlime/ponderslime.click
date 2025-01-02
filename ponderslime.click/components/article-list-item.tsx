@@ -12,13 +12,12 @@ const ArticleListItem = ({category, articles}: Props) => {
             <h2 className="text-xl">{category}</h2>
             <div className="flex flex-col gap-2.5 text-sm">
                 {articles.map((article, id) => (
-                        <Link href={`blog/${article.id}`} key={id} className="text-neutral-900 hover:text-amber-700 transition duration-150">
+                        <Link href={`blog/${article.id}`} key={id} className="text-neutral-900  dark:text-white hover:text-amber-700 transition duration-150">
                             {article.title}
                         </Link>
                     ))
                 }
             </div>
-
         </div>
     )
 }
