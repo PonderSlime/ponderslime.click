@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { getArticleData } from "@/lib/articles";
 
-const Article = async ({params}: {params: {slug: string}}) => {
+const Article = async ({params}: { params: { slug: string }}) => {
     const articleData = await getArticleData(params.slug)
 
     return (
@@ -15,7 +15,7 @@ const Article = async ({params}: {params: {slug: string}}) => {
                 </Link>
                 <p className="">{articleData.date.toString()}</p>
             </div>
-            <article className="w-2/6 text-left article" dangerouslySetInnerHTML={{__html: articleData.contentHtml }}/>
+            <article className="indent-8 w-2/6 text-left article" dangerouslySetInnerHTML={{__html: articleData.contentHtml }}/>
         </div>
     )
 }

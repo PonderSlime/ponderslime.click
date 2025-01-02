@@ -33,7 +33,7 @@ body {
 .article > ol {
   @apply list-decimal flex flex-col mx-10 gap-2
 }
-.article > l {
+.article > ul {
   @apply list-disc flex flex-col mx-10 gap-2
 }
 .article > pre {
@@ -41,4 +41,7 @@ body {
 }
 .article > blockquote {
   @apply pl-5 italic border-l-2 border-neutral-600 border-opacity-40
+}
+.article > p > img {
+  @apply w-1/2 mx-auto rounded-full
 }

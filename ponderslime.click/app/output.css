@@ -643,6 +643,18 @@ video {
   width: 100%;
 }
 
+.w-3\/6 {
+  width: 50%;
+}
+
+.w-1\/6 {
+  width: 16.666667%;
+}
+
+.w-1\/2 {
+  width: 50%;
+}
+
 .min-w-\[200px\] {
   min-width: 200px;
 }
@@ -971,7 +983,7 @@ body {
   gap: 0.5rem;
 }
 
-.article > l {
+.article > ul {
   margin-left: 2.5rem;
   margin-right: 2.5rem;
   display: flex;
@@ -995,6 +1007,13 @@ body {
   --tw-border-opacity: 0.4;
   padding-left: 1.25rem;
   font-style: italic;
+}
+
+.article > p > img {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  border-radius: 9999px;
 }
 
 .hover\:text-amber-700:hover {
