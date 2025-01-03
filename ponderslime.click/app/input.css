@@ -11,10 +11,16 @@
 }
 
 .article > h1 {
-  @apply text-4xl text-center tracking-tight
+  @apply text-5xl text-center tracking-tight font-bold
 }
 .article > h2 {
-  @apply text-3xl tracking-tight
+  @apply text-2xl tracking-tight font-semibold
+}
+.article > h3 {
+  @apply text-sm text-center font-thin pt-10
+}
+.article > h4 {
+  @apply text-xl text-amber-700
 }
 .article > ol {
   @apply list-decimal flex flex-col mx-10 gap-2
@@ -31,6 +37,9 @@
 .article > p > img {
   @apply w-1/2 mx-auto rounded-full
 }
-.article > a {
-  @apply text-amber-700
+.article > p {
+  @apply indent-8 
+}
+.article > p > a {
+  @apply text-xl text-amber-700
 }

@@ -18,7 +18,7 @@ const Article = async ({params}: { params: Promise<Params> }) => {
                 </Link>
                 <p className="">{articleData.date.toString()}</p>
             </div>
-            <article className="indent-8 lg:w-2/6 w-full text-left article" dangerouslySetInnerHTML={{__html: articleData.contentHtml }}/>
+            <article className="lg:w-2/6 w-full text-left article" dangerouslySetInnerHTML={{__html: articleData.contentHtml }}/>
         </div>
     )
 }
