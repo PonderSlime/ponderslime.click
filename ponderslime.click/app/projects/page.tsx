@@ -42,6 +42,9 @@ export default function Projects() {
         <div className="grid grid-rows-[20px_1fr_20px] gap-16 grid-cols-1 items-center justify-items-center min-h-screen p-8 pb-20 sm:p-20 font-[family-name:var(--font-jetbrains-mono)] bg-white dark:bg-slate-900">
             <GlobalHeader />
             <main className="w-full">
+                <h1 className="text-center text-amber-700 text-6xl underline decoration-solid decoration-2 hover:decoration-4 underline-offset-8 font-[family-name:var(--font-courier-mono)]">
+                    My Projects
+                </h1>
                 {Object.entries(projectsByYear).map(([year, projects], yearIndex) => (
                     <div key={year} className="flex flex-col items-center mt-16">
                         <h2 className="text-4xl font-bold text-center mb-4">{year}</h2>

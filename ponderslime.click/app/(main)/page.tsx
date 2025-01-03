@@ -31,7 +31,7 @@ export default function Home() {
       <main className="h-full w-full">
         <div className="flex flex-col gap-2 items-center sm:items-start">
           <Image src="https://avatars.githubusercontent.com/u/174149291" className="self-center" alt="pfp" width={512} height={512}/>
-          <div className="text-center items-center justify-center self-center text-red-500">
+          <div className="text-center items-center justify-center self-center text-amber-700">
             <h1 className="text-center text-6xl underline decoration-solid decoration-2 hover:decoration-4 underline-offset-8 pt-20 font-[family-name:var(--font-courier-mono)]">
               Hi there! I&apos;m PonderSlime!
             </h1>
@@ -51,8 +51,12 @@ export default function Home() {
                  <a className="underline decoration-solid decoration-2 hover:decoration-4 text-blue-400" href="https://hackclub.com/">Github Profile!</a>
               </p>
             </div>
-            <div className="pt-20">
-              <AutoScroll items={favoriteProjects} direction="to-left"/>
+            <div className="pt-20 mb-[232px]">
+            {favoriteProjects.length > 0 ? (
+                <AutoScroll items={favoriteProjects} direction="to-left" />
+              ) : (
+                <p>Loading projects...</p>
+              )}
             </div>
           </div>
         </div>
